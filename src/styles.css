@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme{
+  --color-bg: #FFFFFF;        /* light beige background */
+  --color-surface: #FFFFFF;   /* white surface */
+  --color-primary: #0E3A30;   /* deep green text/icons */
+  --color-accent: #C3A96F;    /* gold accent */
+  --color-muted: #6B7280;     /* gray for text descriptions */
+  --color-border: #E5E7EB;    /* light border */
+  --color-text: #1C1C1C;      /* dark readable text */
+  --hero-background-image: url('/light-hero.png');
+  --font-display: "Oswald", "sans-serif";
+}
+.dark{
+  --color-bg: #0D0D0D;        /* Dark background */
+  --color-surface: #1C1C1C;   /* dark surface */
+  --color-primary: #C3A96F;   /* gold text/icons */
+  --color-accent: #FDFCF9;    /* off-white accent */
+  --color-muted: #9CA3AF;     /* muted gray */
+  --color-border: #374151;    /* gray border */
+  --color-text: #FDFCF9;      /* white text */
+  --hero-background-image: url('/dark-hero.png');
+}
+
+.roboto-flex {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+}

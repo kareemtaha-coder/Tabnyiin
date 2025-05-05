@@ -1,0 +1,63 @@
+<!-- <section class="bg-hero flex flex-col sm:flex-row w-full container mx-auto items-center">
+  <div class="content w-full p-2.5 sm:w-[60%]">
+    <h1 class="xl:text-7xl mb-8 text-center font-black text-primary sm:text-5xl text-4xl">Welcome to Tabiiyn Institute</h1>
+    <p class="sm:max-w-[90%] text-center roboto-flex text-primary md:text-2xl sm:text-xl text-[16px]">
+      We are a global platform offering personalized lessons in Arabic, Islamic
+      studies, and the Quran. With highly qualified teachers, we aim to make
+      learning Arabic and Quranic studies enjoyable and accessible for students
+      and parents worldwide.
+    </p>
+  </div>
+  <div class="img sm:w-[50%] h-[90%] flex items-center">
+    <img src="/hero-img.webp" alt="" class="w-full" />
+  </div>
+</section> -->
+
+<section class="hero-section relative overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="animate-float-slow absolute top-20 left-10 w-32 h-32 rounded-full bg-primary"></div>
+    <div class="animate-float absolute top-40 right-20 w-24 h-24 rounded-full bg-secondary"></div>
+    <div class="animate-float-fast absolute bottom-20 left-1/4 w-16 h-16 rounded-full bg-accent"></div>
+  </div>
+
+  <div class="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center justify-between">
+    <!-- Content Section -->
+    <div class="content w-full md:w-1/2 mb-10 md:mb-0 md:pr-8 animate-fade-in">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-primary dark:text-white mb-6 tracking-tight leading-tight">
+        <span class="block animate-title">Welcome to</span>
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary animate-title-delay">Tabiiyn Institute</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8 max-w-xl animate-fade-up">
+        A global platform offering personalized lessons in Arabic, Islamic studies, and the Quran with qualified teachers making learning enjoyable and accessible worldwide.
+      </p>
+
+      <div class="flex flex-wrap gap-4 animate-fade-up-delay">
+        <button class="px-6 py-3 bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">
+          Start Learning
+        </button>
+        <button class="px-6 py-3 bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-medium rounded-lg transition-all duration-300">
+          Explore Courses
+        </button>
+      </div>
+    </div>
+
+    <!-- Image Section with animation -->
+    <div class="img-container w-full md:w-1/2 relative animate-float-medium">
+      <div class="relative z-10 rounded-2xl overflow-hidden  transform transition-transform hover:scale-[1.02] duration-500">
+        <img
+          src="/hero-img.webp"
+          alt="Tabiiyn Institute Students"
+          class="w-full h-auto object-cover"
+          loading="eager"
+        />
+        <div class="absolute inset-0 from-primary/30 to-transparent opacity-60"></div>
+      </div>
+
+      <!-- Decorative elements -->
+      <div class="hidden md:block absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-accent/20 animate-pulse"></div>
+      <div class="hidden md:block absolute -top-6 -right-6 w-32 h-32 rounded-full border-4 border-primary/20"></div>
+    </div>
+  </div>
+</section>
