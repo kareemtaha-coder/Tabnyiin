@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Tabnyiin": {
+    "swiper": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/tabnyiin",
+            "outputPath": "dist/swiper",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Tabnyiin:build:production"
+              "buildTarget": "swiper:build:production"
             },
             "development": {
-              "buildTarget": "Tabnyiin:build:development"
+              "buildTarget": "swiper:build:development"
             }
           },
           "defaultConfiguration": "development"
