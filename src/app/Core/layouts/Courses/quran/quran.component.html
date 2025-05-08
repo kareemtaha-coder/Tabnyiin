@@ -1,0 +1,331 @@
+<!-- quran-hero.component.html -->
+<section class="hero-section min-h-[70vh] relative overflow-hidden">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 opacity-10">
+    <div
+      class="animate-float-slow absolute top-20 left-10 w-32 h-32 rounded-full bg-primary"
+    ></div>
+    <div
+      class="animate-float absolute top-40 right-20 w-24 h-24 rounded-full bg-secondary"
+    ></div>
+    <div
+      class="animate-float-fast absolute bottom-20 left-1/4 w-16 h-16 rounded-full bg-accent"
+    ></div>
+  </div>
+  <div
+    class="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center justify-between"
+  >
+    <!-- Content Section -->
+    <div class="content w-full md:w-1/2 mb-10 md:mb-0 md:pr-8 animate-fade-in">
+      <h1
+        class="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary dark:text-white mb-6 tracking-tight leading-tight"
+      >
+        Learn the Quran <span class="relative inline-block">
+          <span class="animate-underline">Live</span>
+        </span> with Expert Teachers
+      </h1>
+      <p
+        class="text-lg sm:text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8 max-w-xl animate-fade-up"
+      >
+        Personalized 1:1 or Group Classes Tailored to Your Needs.
+      </p>
+      <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 animate-fade-up-delay">
+        Flexible schedules • Male & female teachers • All ages welcome
+      </p>
+      <div class="flex flex-wrap gap-4 animate-fade-up-delay">
+        <button
+          class="px-8 py-4 bg-[#2E7D32] hover:bg-[#4CAF50] text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+          aria-label="Start your Quran course trial"
+        >
+          Start Your Free Trial
+        </button>
+        <button
+          class="px-8 py-4 bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-medium rounded-lg transition-all duration-300"
+        >
+          Contact Us
+        </button>
+      </div>
+    </div>
+    <!-- YouTube Video Section -->
+    <div class="video-container w-full md:w-1/2 relative animate-float-medium">
+      <div
+        class="relative z-10 rounded-2xl overflow-hidden transform transition-transform hover:scale-[1.02] duration-500"
+      >
+        <!-- YouTube Video Embed -->
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe
+            width="100%"
+            height="100%"
+            [src]="videoUrl | safe"
+            title="Teacher leading a live Quran class with students via video call"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+            class="absolute top-0 left-0 w-full h-full"
+          ></iframe>
+        </div>
+        <!-- Gradient overlay -->
+
+      </div>
+      <!-- Decorative elements -->
+      <div
+        class="hidden md:block absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-accent/20 animate-pulse"
+      ></div>
+      <div
+        class="hidden md:block absolute -top-6 -right-6 w-32 h-32 rounded-full "
+      ></div>
+    </div>
+  </div>
+</section>
+
+<!-- Course Overview Section -->
+<section class="overview-section py-20 relative overflow-hidden">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="animate-float-slow absolute top-20 right-10 w-40 h-40 rounded-full bg-primary"></div>
+    <div class="animate-float absolute bottom-40 left-20 w-32 h-32 rounded-full bg-teal-500"></div>
+  </div>
+
+  <div class="container mx-auto px-4">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">
+        <span class="bg-clip-text bg-gradient-to-br text-primary">Course Overview</span>
+      </h2>
+      <div class="w-24 h-1 bg-teal-500 mx-auto mb-6"></div>
+      <p class="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
+        Our comprehensive Quranic Studies Program is designed to help students of all levels develop a meaningful connection with the Quran through proper recitation, understanding, and application.
+      </p>
+    </div>
+
+    <!-- Course Modules -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+      <div *ngFor="let module of courseModules" class="feature-card bg-white dark:bg-zinc-950 rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+        <div class="w-14 h-14 mb-6 rounded-full flex items-center justify-center transition-all duration-300"
+            [ngClass]="{'bg-purple-100 dark:bg-purple-900/30 group-hover:bg-purple-600': module.color === 'purple',
+                      'bg-blue-100 dark:bg-blue-900/30 group-hover:bg-blue-600': module.color === 'blue',
+                      'bg-teal-100 dark:bg-teal-900/30 group-hover:bg-teal-600': module.color === 'teal',
+                      'bg-amber-100 dark:bg-amber-900/30 group-hover:bg-amber-600': module.color === 'amber'}">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 transition-all duration-300"
+              [ngClass]="{'text-purple-600 dark:text-purple-400 group-hover:text-white': module.color === 'purple',
+                        'text-blue-600 dark:text-blue-400 group-hover:text-white': module.color === 'blue',
+                        'text-teal-600 dark:text-teal-400 group-hover:text-white': module.color === 'teal',
+                        'text-amber-600 dark:text-amber-400 group-hover:text-white': module.color === 'amber'}"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+            <path *ngIf="module.icon === 'book-open'" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            <path *ngIf="module.icon === 'brain'" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            <path *ngIf="module.icon === 'search'" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <path *ngIf="module.icon === 'mic'" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-3">{{ module.title }}</h3>
+        <p class="text-slate-600 dark:text-slate-300">
+          {{ module.description }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="mb-24">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-8 text-center text-slate-800 dark:text-white">
+        Experience Our Quran Program
+      </h3>
+
+      <!-- Main Gallery Slider -->
+      <div class="relative mb-6">
+        <swiper-container #galleryContainer class="gallery-swiper" init="false" style="width: 100%; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+          <swiper-slide *ngFor="let image of galleryImages">
+            <div class="relative">
+              <img [src]="image.url" [alt]="image.alt" class="w-full h-96 object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <span class="bg-white/90 dark:bg-zinc-800/90 text-primary py-2 px-4 rounded-lg font-medium text-sm tracking-wide inline-block">
+                  QURAN COURSE
+                </span>
+                <h3 class="text-white text-2xl md:text-3xl font-bold mt-3">
+                  {{ image.caption }}
+                </h3>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+
+      <!-- Thumbnail Gallery -->
+      <swiper-container #galleryThumbsContainer class="gallery-thumbs" init="false" style="width: 100%;">
+        <swiper-slide *ngFor="let image of galleryImages">
+          <div class="cursor-pointer p-1">
+            <img [src]="image.url" [alt]="image.alt" class="w-full h-24 object-cover rounded-lg" [class.ring-4]="selectedImage === image.id" [class.ring-primary]="selectedImage === image.id" />
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section py-8 md:py-16 relative overflow-hidden">
+  <!-- Subtle background elements -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-20 right-10 w-32 h-32 rounded-full bg-primary blur-xl"></div>
+    <div class="absolute bottom-40 left-20 w-24 h-24 rounded-full bg-accent blur-lg"></div>
+  </div>
+
+  <div class="container mx-auto px-4">
+    <!-- Section header -->
+    <div class="text-center mb-8 md:mb-12">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 tracking-tight">
+        <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-primary">
+          Our Students Love Their Teachers
+        </span>
+      </h2>
+      <div class="w-16 h-1 bg-teal-500 mx-auto mb-4"></div>
+      <p class="text-sm md:text-base text-slate-700 dark:text-slate-300 max-w-lg mx-auto">
+        Discover what our students say about their learning journey with us
+      </p>
+    </div>
+
+    <!-- Testimonial Slider -->
+    <swiper-container #testimonialsContainer class="testimonial-swiper mb-6" init="false" style="width: 100%; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+      <swiper-slide *ngFor="let testimonial of testimonials; let i = index">
+        <div class="bg-white dark:bg-zinc-900 rounded-xl overflow-hidden md:flex">
+          <!-- Mobile view (top image, content below) -->
+          <div class="md:hidden">
+            <div class="relative w-full h-48">
+              <img [src]="testimonial.avatar" class="w-full h-full object-cover" [alt]="testimonial.name" />
+              <!-- Course badge -->
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 bg-white/90 dark:bg-zinc-900/90 text-primary rounded-full text-xs font-medium backdrop-blur-sm">
+                  {{testimonial.course}}
+                </span>
+              </div>
+              <!-- Rating display -->
+              <div class="absolute top-4 right-4">
+                <span class="flex items-center bg-white/90 dark:bg-zinc-900/90 text-amber-500 px-2 py-1 rounded-full backdrop-blur-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                  <span class="ml-1 text-xs">{{testimonial.rating}}</span>
+                </span>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-xl font-bold text-primary dark:text-white mb-2">
+                {{ testimonial.name }}
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 mb-1 text-sm">
+                {{ testimonial.location }}
+              </p>
+              <p class="text-md text-slate-800 dark:text-slate-200 mb-4 italic">
+                "{{ testimonial.quote }}"
+              </p>
+            </div>
+          </div>
+
+          <!-- Desktop view (content on left, image on right) -->
+          <div class="hidden md:flex">
+            <div class="w-3/5 p-6 flex flex-col justify-center">
+              <!-- Course badge -->
+              <div class="mb-3">
+                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                  {{testimonial.course}}
+                </span>
+              </div>
+
+              <h3 class="text-2xl font-bold text-primary dark:text-white mb-2">
+                {{ testimonial.name }}
+              </h3>
+
+              <p class="text-slate-600 dark:text-slate-300 mb-3 text-sm">
+                {{ testimonial.location }}
+              </p>
+
+              <!-- Rating display -->
+              <div class="mb-4 flex items-center">
+                <span class="flex items-center text-amber-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                  <span class="ml-2 text-sm text-slate-700 dark:text-slate-300">{{testimonial.rating}}</span>
+                </span>
+              </div>
+
+              <p class="text-lg text-slate-800 dark:text-slate-200 mb-4 italic">
+                "{{ testimonial.quote }}"
+              </p>
+            </div>
+
+            <!-- Image area (right side) -->
+            <div class="w-2/5 flex items-center justify-center p-6">
+              <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg">
+                <img [src]="testimonial.avatar" class="w-full h-full object-cover" [alt]="testimonial.name" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+
+    <!-- Testimonial navigation arrows -->
+    <div class="flex justify-center gap-4 mb-8">
+      <button (click)="prevTestimonial()" class="w-10 h-10 rounded-full bg-white dark:bg-zinc-800 text-primary flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button (click)="nextTestimonial()" class="w-10 h-10 rounded-full bg-white dark:bg-zinc-800 text-primary flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="mt-8 grid grid-cols-2 gap-3">
+      <div class="text-center p-4 rounded-lg bg-white/50 dark:bg-zinc-900/50 shadow-sm">
+        <div class="text-2xl md:text-3xl font-bold text-purple-600 dark:text-purple-400">
+          98%
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 text-xs md:text-sm">
+          Student Satisfaction
+        </div>
+      </div>
+
+      <div class="text-center p-4 rounded-lg bg-white/50 dark:bg-zinc-900/50 shadow-sm">
+        <div class="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">
+          4.9/5
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 text-xs md:text-sm">
+          Average Rating
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="mt-8 text-center">
+      <button class="w-full md:w-auto px-6 py-3 bg-gradient-to-r from-primary to-accent text-white font-medium rounded-lg shadow-md hover:shadow-lg">
+        <span class="flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Schedule Free Trial
+        </span>
+      </button>
+    </div>
+  </div>
+</section>

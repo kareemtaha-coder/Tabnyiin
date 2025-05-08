@@ -11,6 +11,7 @@
   --hero-background-image: url("/light-hero.png");
   --font-display: "Oswald", "sans-serif";
   --gradiente-text: " bg-gradient-to-r from-primary to-secondary animate-title-delay";
+
 }
 .dark {
   --color-bg: #0d0d0d; /* Dark background */
@@ -23,3 +24,21 @@
   --hero-background-image: url("/dark-hero.png");
 }
 @import 'swiper/css/thumbs';
+/* Font settings */
+body {
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* RTL support for Arabic text */
+[lang="ar"] {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  direction: rtl;
+}
+
+/* Tailwind doesn't include this by default */
+@layer utilities {
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
