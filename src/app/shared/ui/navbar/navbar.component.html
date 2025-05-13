@@ -18,16 +18,16 @@
             </svg>
           </button>
           <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50">
-            <a routerLink="/courses/quran" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300 rounded-t-lg">Quran Studies</a>
-            <a routerLink="/courses/arabic" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300">Arabic Language</a>
-            <a routerLink="/courses/islamic" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300 rounded-b-lg">Islamic Studies</a>
+            <a routerLink="/courses/quran"  href="/courses/quran" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300 rounded-t-lg">Quran Studies</a>
+            <a routerLink="/courses/arabic"  href="/courses/arabic" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300">Arabic Language</a>
+            <a routerLink="/courses/islamic" href="/courses/islamic" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300 rounded-b-lg">Islamic Studies</a>
           </div>
         </div>
-        <a routerLink="/"  (click)="navigateToFragment('about')" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">About Us</a>
+        <a routerLink="/" href="/" (click)="navigateToFragment('about')" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">About Us</a>
           @if (isUserLogedIn()) {
           <a (click)="logout()" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">logout</a>
         }@else{
-          <a routerLink="/login" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">login</a>
+          <a routerLink="/login" href="/login" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">login</a>
         }
 
 
@@ -110,7 +110,8 @@
       <div class="pt-4 pb-2 space-y-2 border-t border-gray-200 dark:border-gray-700">
         <!-- Mobile Dropdown -->
           <a
-          routerLink="/"
+          routerLink="/"           href="/"
+
           (click)="closeMobileMenu()"
           class="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300"
         >
@@ -142,21 +143,21 @@
             <div class="pl-4 space-y-2 py-2">
 
               <a
-                routerLink="/quran"
+                routerLink="/quran" href="/quran"
                 (click)="closeMobileMenu()"
                 class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300"
               >
                 Quran Studies
               </a>
               <a
-                routerLink="/arabic"
+                routerLink="/arabic" href="/arabic"
                 (click)="closeMobileMenu()"
                 class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300"
               >
                 Arabic Language
               </a>
               <a
-                routerLink="/islamic"
+                routerLink="/islamic" href="/islamic"
                 (click)="closeMobileMenu()"
                 class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300"
               >
@@ -173,7 +174,12 @@
         >
           About Us
         </a>
-
+        <a routerLink="/" href="/" (click)="navigateToFragment('about')" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">About Us</a>
+          @if (isUserLogedIn()) {
+          <a (click)="logout()" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">logout</a>
+        }@else{
+          <a routerLink="/login" href="/login" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">login</a>
+        }
         <button
           (click)=" closeMobileMenu()"
           class="w-full px-4 py-3 bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-all duration-300 text-center"
