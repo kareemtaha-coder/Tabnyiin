@@ -84,9 +84,8 @@ export class TestimonialsComponent implements OnInit ,AfterViewInit {
       spaceBetween: 20,
       loop: true,
       breakpoints: {
-        '440': { slidesPerView: 1.1 },
-        '640': { slidesPerView: 2.1 },
-        '1024': { slidesPerView: 2.1 },
+        '350': { slidesPerView: 1.1 },
+        '640': { slidesPerView: 2.1 }
       },
   }
 
