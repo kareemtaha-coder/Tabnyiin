@@ -1,3 +1,6 @@
+
+@tailwind utilities;
+
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
@@ -10,9 +13,9 @@
   --color-muted: #6b7280; /* gray for text descriptions */
   --color-border: #e5e7eb; /* light border */
   --color-text: #1c1c1c; /* dark readable text */
-  --hero-background-image: url("/light-hero.png");
-  --font-display: "Oswald", "sans-serif";
+  
 }
+
 
 .dark {
   --color-bg: #0d0d0d; /* Dark background */
@@ -24,13 +27,12 @@
   --color-muted: #9ca3af; /* muted gray */
   --color-border: #374151; /* gray border */
   --color-text: #fdfcf9; /* white text */
-  --hero-background-image: url("/dark-hero.png");
 }
 /* Font settings */
 body {
   font-family: 'Inter', 'Poppins', sans-serif;
-
 }
+
 html{
       scroll-behavior: smooth;
 }

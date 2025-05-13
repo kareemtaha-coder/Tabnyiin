@@ -10,16 +10,36 @@ import { authGuard } from './Core/guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', component: HeroComponent },
-  { path: 'courses/quran', component: QuranComponent },
-  { path: 'courses/arabic', component: ArabicComponent },
-  { path: 'courses/islamic', component: IslamicComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'courses/quran',
+    loadComponent:()=>import('./Core/layouts/Courses/quran/quran.component').then(m=>m.QuranComponent)
+  },
+  { path: 'courses/arabic',
+    loadComponent:()=>import('./Core/layouts/Courses/arabic/arabic.component').then(m=>m.ArabicComponent)
+  },
+  { path: 'courses/islamic',
+    loadComponent:()=>import('./Core/layouts/Courses/islamic/islamic.component').then(m=>m.IslamicComponent)
+  },
+  { path: 'login',
+    loadComponent:()=>import('./features/auth/login/login.component').then(m=>m.LoginComponent)
+  },
   {
-    path: 'dashboard', canActivate:[authGuard],
+    path: 'dashboard',
+    canActivate: [authGuard],
     component: DashboardComponent,
-    children: [{ path: 'contact', component: ContactsDashboardComponent  },
-    { path: '', component: ContactsDashboardComponent  }
-  ],
-
+    children: [
+      {
+        path: 'contact',
+        loadComponent: () =>
+          import('./features/dashboard/contacts-dashboard/contacts-dashboard.component')
+            .then(m => m.ContactsDashboardComponent)
+      },
+      {
+        path: '',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('./features/dashboard/contacts-dashboard/contacts-dashboard.component')
+            .then(m => m.ContactsDashboardComponent)
+      }
+    ]
   },
 ];

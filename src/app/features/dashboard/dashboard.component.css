@@ -1,6 +1,5 @@
 html, body {
   height: 100%;
-  @apply font-sans antialiased;
 }
 
 body {
