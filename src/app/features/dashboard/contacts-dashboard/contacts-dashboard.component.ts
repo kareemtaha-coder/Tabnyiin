@@ -2,8 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ContactsService } from '../../../Core/services/contacts.service';
 import { Subscription, timer } from 'rxjs';
 import { switchMap, retry, share } from 'rxjs/operators';
-import * as FileSaver from 'file-saver';
-import * as XLSX from 'xlsx';
+// import { saveAs } from 'file-saver';
+// import * as XLSX from 'xlsx';
 import { CommonModule } from '@angular/common';
 
 interface Contact {
@@ -104,24 +104,28 @@ export class ContactsDashboardComponent implements OnInit, OnDestroy {
 
 
     // Download Data Button Methods
-    downloadExcel(): void {
-      const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.contacts);
-      const workbook: XLSX.WorkBook = {
+    async  downloadExcel(): Promise<void> {
+      const [{ utils, write }] = await Promise.all([
+    import('xlsx')]);
+
+      const worksheet = utils.json_to_sheet(this.contacts);
+      const workbook= {
         Sheets: { data: worksheet },
         SheetNames: ['data'],
       };
-      const excelBuffer: any = XLSX.write(workbook, {
+      const excelBuffer: any = write(workbook, {
         bookType: 'xlsx',
         type: 'array',
       });
       this.saveAsExcelFile(excelBuffer, 'contacts');
     }
 
-    private saveAsExcelFile(buffer: any, fileName: string): void {
+    async saveAsExcelFile(buffer: any, fileName: string): Promise<void> {
+      const { saveAs } = await import('file-saver');
       const data: Blob = new Blob([buffer], {
         type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8',
       });
-      FileSaver.saveAs(data, `${fileName}_export_${new Date().getTime()}.xlsx`);
+       saveAs(data, `${fileName}_export_${new Date().getTime()}.xlsx`);
     }
 
 
