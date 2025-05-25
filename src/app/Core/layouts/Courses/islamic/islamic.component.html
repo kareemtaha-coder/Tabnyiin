@@ -22,16 +22,12 @@
       <h1
         class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-4 tracking-tight leading-tight font-display"
       >
-        <span class="block animate-title">Master</span>
-        <span
-          class="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary animate-title-delay"
-          >Islamic Studies</span
-        >
+        <span class="block animate-title">{{ 'COURSES.ISLAMIC.HERO.TITLE' | translate }}</span>
       </h1>
       <p
         class="text-base sm:text-lg md:text-xl text-text leading-relaxed mb-6 md:mb-8 max-w-2xl mx-auto animate-fade-up"
       >
-        Journey through the rich traditions of Islam with expert guidance. Our comprehensive Islamic courses combine Quran, Hadith, Fiqh, and practical applications for modern Muslims.
+        {{ 'COURSES.ISLAMIC.HERO.SUBTITLE' | translate }}
       </p>
     </div>
 
@@ -95,93 +91,18 @@
     >
       <button
         class="w-full sm:w-auto px-6 py-3 bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+        (click)="contactService.openModal()"
       >
-        Begin Your Journey
+        {{ 'COURSES.ISLAMIC.HERO.CTA.START' | translate }}
       </button>
       <button
         class="w-full sm:w-auto px-6 py-3 bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-medium rounded-lg transition-all duration-300"
+        (click)="contactService.openModal()"
       >
-        View Curriculum
+        {{ 'COURSES.ISLAMIC.HERO.CTA.CURRICULUM' | translate }}
       </button>
     </div>
 
-    <!-- Mobile app-like feature highlights -->
-    <div
-      class="w-full max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8 md:mt-12"
-    >
-      <div
-        class="feature-card bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-primary/10 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-      >
-        <div
-          class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mb-3"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 text-primary"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"
-            />
-          </svg>
-        </div>
-        <h3 class="font-bold text-lg mb-1">Quranic Studies</h3>
-        <p class="text-sm text-text/80">
-          Learn proper recitation and understanding of the Holy Quran
-        </p>
-      </div>
-
-      <div
-        class="feature-card bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-primary/10 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-      >
-        <div
-          class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center mb-3"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 text-secondary"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </div>
-        <h3 class="font-bold text-lg mb-1">Hadith & Sunnah</h3>
-        <p class="text-sm text-text/80">
-          Explore the traditions and teachings of Prophet Muhammad (PBUH)
-        </p>
-      </div>
-
-      <div
-        class="feature-card bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-primary/10 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-      >
-        <div
-          class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-3"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 text-accent"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </div>
-        <h3 class="font-bold text-lg mb-1">Islamic Jurisprudence</h3>
-        <p class="text-sm text-text/80">
-          Understand Fiqh and its application in contemporary life
-        </p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -209,311 +130,173 @@
         <span
           class="bg-gradient-to-r from-primary/20 to-secondary/20 px-4 py-1 rounded-full text-sm font-medium text-primary"
         >
-          Course Overview
+          {{ 'COURSES.ISLAMIC.OVERVIEW.BADGE' | translate }}
         </span>
       </div>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-primary">
-        Your Journey Through Islamic Knowledge
+        {{ 'COURSES.ISLAMIC.OVERVIEW.TITLE' | translate }}
       </h2>
       <p class="text-base md:text-lg text-text/90 max-w-2xl mx-auto">
-        Our comprehensive curriculum is designed to take you from foundational concepts to deep understanding of Islamic sciences, suitable for all levels of learners.
+        {{ 'COURSES.ISLAMIC.OVERVIEW.DESCRIPTION' | translate }}
       </p>
     </div>
 
-    <!-- Stats Cards -->
-    <div class="grid grid-cols-2 gap-4 mb-12 md:mb-16">
-      <div
-        class="stat-card bg-white/5 backdrop-blur-sm border border-primary/10 rounded-lg p-4 md:p-6 text-center transform transition-all hover:scale-105 hover:shadow-lg"
-      >
-        <div class="text-primary text-3xl md:text-4xl font-bold mb-1">24/7</div>
-        <div class="text-text/80 text-sm md:text-base">Support Access</div>
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+      <!-- Prophetic Biography -->
+      <div class="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+            <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 dark:text-white">
+            {{ 'COURSES.ISLAMIC.SEERAH.TITLE' | translate }}
+          </h3>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 mb-6">
+          {{ 'COURSES.ISLAMIC.SEERAH.DESCRIPTION' | translate }}
+        </p>
       </div>
-      <div
-        class="stat-card bg-white/5 backdrop-blur-sm border border-primary/10 rounded-lg p-4 md:p-6 text-center transform transition-all hover:scale-105 hover:shadow-lg"
-      >
-        <div class="text-primary text-3xl md:text-4xl font-bold mb-1">5k+</div>
-        <div class="text-text/80 text-sm md:text-base">Active Students</div>
+
+      <!-- Mothers of Believers -->
+      <div class="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+            <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 dark:text-white">
+            {{ 'COURSES.ISLAMIC.MOTHERS.TITLE' | translate }}
+          </h3>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 mb-6">
+          {{ 'COURSES.ISLAMIC.MOTHERS.DESCRIPTION' | translate }}
+        </p>
       </div>
-    </div>
 
-    <!-- Course Benefits -->
-    <div class="mb-16">
-      <h3
-        class="text-xl md:text-2xl font-bold mb-6 text-center md:text-left text-primary"
-      >
-        What You'll Gain
-      </h3>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Benefit Card 1 -->
-        <div
-          class="benefit-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300"
-        >
-          <div
-            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-primary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-              />
+      <!-- Islamic Etiquette -->
+      <div class="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+            <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
             </svg>
           </div>
-          <h4 class="text-lg font-semibold mb-2 text-primary">
-            Structured Learning Path
-          </h4>
-          <p class="text-text/80 text-sm">
-            Follow our carefully designed curriculum that gradually builds your knowledge of Islam from basics to advanced concepts.
-          </p>
+          <h3 class="text-2xl font-bold text-slate-800 dark:text-white">
+            {{ 'COURSES.ISLAMIC.ETIQUETTE.TITLE' | translate }}
+          </h3>
         </div>
-
-        <!-- Benefit Card 2 -->
-        <div
-          class="benefit-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300"
-        >
-          <div
-            class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-secondary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
-              />
-            </svg>
+        <p class="text-slate-600 dark:text-slate-400 mb-6">
+          {{ 'COURSES.ISLAMIC.ETIQUETTE.DESCRIPTION' | translate }}
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-4">
+            <h5 class="font-semibold text-primary mb-2">{{ 'COURSES.ISLAMIC.ETIQUETTE.ITEMS.EATING.TITLE' | translate }}</h5>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              {{ 'COURSES.ISLAMIC.ETIQUETTE.ITEMS.EATING.DESCRIPTION' | translate }}
+            </p>
           </div>
-          <h4 class="text-lg font-semibold mb-2 text-primary">
-            Quranic Recitation
-          </h4>
-          <p class="text-text/80 text-sm">
-            Master proper tajweed and recitation of the Holy Quran with our specialized training techniques and personalized feedback.
-          </p>
+          <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-4">
+            <h5 class="font-semibold text-primary mb-2">{{ 'COURSES.ISLAMIC.ETIQUETTE.ITEMS.SLEEPING.TITLE' | translate }}</h5>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              {{ 'COURSES.ISLAMIC.ETIQUETTE.ITEMS.SLEEPING.DESCRIPTION' | translate }}
+            </p>
+          </div>
+          <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-4">
+            <h5 class="font-semibold text-primary mb-2">{{ 'COURSES.ISLAMIC.ETIQUETTE.ITEMS.MOSQUE.TITLE' | translate }}</h5>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              {{ 'COURSES.ISLAMIC.ETIQUETTE.ITEMS.MOSQUE.DESCRIPTION' | translate }}
+            </p>
+          </div>
+          <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-4">
+            <h5 class="font-semibold text-primary mb-2">{{ 'COURSES.ISLAMIC.ETIQUETTE.ITEMS.SOCIAL.TITLE' | translate }}</h5>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              {{ 'COURSES.ISLAMIC.ETIQUETTE.ITEMS.SOCIAL.DESCRIPTION' | translate }}
+            </p>
+          </div>
         </div>
+      </div>
 
-        <!-- Benefit Card 3 -->
-        <div
-          class="benefit-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300"
-        >
-          <div
-            class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-accent"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              />
+      <!-- Islamic Ethics -->
+      <div class="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+            <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
             </svg>
           </div>
-          <h4 class="text-lg font-semibold mb-2 text-primary">
-            Tafsir Understanding
-          </h4>
-          <p class="text-text/80 text-sm">
-            Gain insights into the meanings, context, and wisdom behind Quranic verses with our detailed explanations.
-          </p>
+          <h3 class="text-2xl font-bold text-slate-800 dark:text-white">
+            {{ 'COURSES.ISLAMIC.ETHICS.TITLE' | translate }}
+          </h3>
         </div>
-
-        <!-- Benefit Card 4 -->
-        <div
-          class="benefit-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300"
-        >
-          <div
-            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-primary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
+        <p class="text-slate-600 dark:text-slate-400 mb-6">
+          {{ 'COURSES.ISLAMIC.ETHICS.DESCRIPTION' | translate }}
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-4">
+            <h5 class="font-semibold text-primary mb-2">{{ 'COURSES.ISLAMIC.ETHICS.ITEMS.VIRTUES.TITLE' | translate }}</h5>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              {{ 'COURSES.ISLAMIC.ETHICS.ITEMS.VIRTUES.DESCRIPTION' | translate }}
+            </p>
           </div>
-          <h4 class="text-lg font-semibold mb-2 text-primary">
-            Hadith Sciences
-          </h4>
-          <p class="text-text/80 text-sm">
-            Learn about the sayings and traditions of Prophet Muhammad (PBUH) and their authentication methods.
-          </p>
-        </div>
-
-        <!-- Benefit Card 5 -->
-        <div
-          class="benefit-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300"
-        >
-          <div
-            class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-secondary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
+          <div class="bg-slate-50 dark:bg-zinc-800 rounded-xl p-4">
+            <h5 class="font-semibold text-primary mb-2">{{ 'COURSES.ISLAMIC.ETHICS.ITEMS.VICES.TITLE' | translate }}</h5>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              {{ 'COURSES.ISLAMIC.ETHICS.ITEMS.VICES.DESCRIPTION' | translate }}
+            </p>
           </div>
-          <h4 class="text-lg font-semibold mb-2 text-primary">
-            Ummah Community
-          </h4>
-          <p class="text-text/80 text-sm">
-            Join a global community of Muslims for mutual support, practice, and shared wisdom on your Islamic journey.
-          </p>
-        </div>
-
-        <!-- Benefit Card 6 -->
-        <div
-          class="benefit-card bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300"
-        >
-          <div
-            class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-accent"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-              />
-            </svg>
-          </div>
-          <h4 class="text-lg font-semibold mb-2 text-primary">
-            Practical Islam
-          </h4>
-          <p class="text-text/80 text-sm">
-            Learn how to apply Islamic teachings in daily modern life with practical examples and guidance.
-          </p>
         </div>
       </div>
     </div>
 
-    <!-- Course Curriculum Preview -->
-    <div class="mb-16">
-      <div
-        class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6"
-      >
-        <h3 class="text-xl md:text-2xl font-bold text-primary">
-          Curriculum Highlights
-        </h3>
+    <!-- Features Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white dark:bg-zinc-900 rounded-2xl p-6 shadow-lg">
+        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+          </svg>
+        </div>
+        <h4 class="text-xl font-semibold text-slate-800 dark:text-white mb-2">
+          {{ 'COURSES.ISLAMIC.FEATURES.INTERACTIVE.TITLE' | translate }}
+        </h4>
+        <p class="text-slate-600 dark:text-slate-400">
+          {{ 'COURSES.ISLAMIC.FEATURES.INTERACTIVE.DESCRIPTION' | translate }}
+        </p>
       </div>
 
-      <div
-        class="bg-white/5 backdrop-blur-sm rounded-xl border border-primary/10 overflow-hidden"
-      >
-        <!-- Module 1 -->
-        <div
-          class="curriculum-item border-b border-primary/10 hover:bg-primary/5 transition-colors"
-        >
-          <div
-            class="p-4 md:p-6 flex flex-col md:flex-row md:items-center justify-between cursor-pointer"
-          >
-            <div class="flex items-start md:items-center">
-              <div
-                class="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center text-primary font-semibold mr-4 shrink-0"
-              >
-                1
-              </div>
-              <div>
-                <h4 class="font-medium text-primary">
-                  Foundations of Islamic Faith
-                </h4>
-                <p class="text-text/70 text-sm mt-1">
-                  Aqeedah, pillars of Islam, and fundamental beliefs
-                </p>
-              </div>
-            </div>
-
-          </div>
+      <div class="bg-white dark:bg-zinc-900 rounded-2xl p-6 shadow-lg">
+        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
         </div>
+        <h4 class="text-xl font-semibold text-slate-800 dark:text-white mb-2">
+          {{ 'COURSES.ISLAMIC.FEATURES.COMMUNITY.TITLE' | translate }}
+        </h4>
+        <p class="text-slate-600 dark:text-slate-400">
+          {{ 'COURSES.ISLAMIC.FEATURES.COMMUNITY.DESCRIPTION' | translate }}
+        </p>
+      </div>
 
-        <!-- Module 2 -->
-        <div
-          class="curriculum-item border-b border-primary/10 hover:bg-primary/5 transition-colors"
-        >
-          <div
-            class="p-4 md:p-6 flex flex-col md:flex-row md:items-center justify-between cursor-pointer"
-          >
-            <div class="flex items-start md:items-center">
-              <div
-                class="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center text-primary font-semibold mr-4 shrink-0"
-              >
-                2
-              </div>
-              <div>
-                <h4 class="font-medium text-primary">Quran Sciences</h4>
-                <p class="text-text/70 text-sm mt-1">
-                  Comprehensive study of Quranic recitation, tajweed, and tafsir
-                </p>
-              </div>
-            </div>
-
-          </div>
+      <div class="bg-white dark:bg-zinc-900 rounded-2xl p-6 shadow-lg">
+        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
         </div>
-
-        <!-- Module 3 -->
-        <div
-          class="curriculum-item border-b border-primary/10 hover:bg-primary/5 transition-colors"
-        >
-          <div
-            class="p-4 md:p-6 flex flex-col md:flex-row md:items-center justify-between cursor-pointer"
-          >
-            <div class="flex items-start md:items-center">
-              <div
-                class="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center text-primary font-semibold mr-4 shrink-0"
-              >
-                3
-              </div>
-              <div>
-                <h4 class="font-medium text-primary">Islamic Jurisprudence</h4>
-                <p class="text-text/70 text-sm mt-1">
-                  Understanding Fiqh, Islamic law, and its application in contemporary life
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
+        <h4 class="text-xl font-semibold text-slate-800 dark:text-white mb-2">
+          {{ 'COURSES.ISLAMIC.FEATURES.PROGRESS.TITLE' | translate }}
+        </h4>
+        <p class="text-slate-600 dark:text-slate-400">
+          {{ 'COURSES.ISLAMIC.FEATURES.PROGRESS.DESCRIPTION' | translate }}
+        </p>
       </div>
     </div>
   </div>
 </section>
+
+<app-contact-form-modal></app-contact-form-modal>

@@ -20,16 +20,16 @@
       <h1
         class="text-4xl font-black text-primary dark:text-white tracking-tight"
       >
-        <span class="block animate-title">Welcome to</span>
+        <span class="block animate-title">{{ 'AUTH.LOGIN.TITLE' | translate }}</span>
         <span
           class="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary animate-title-delay"
-          >Tabiiyn Institute</span
+          >{{ 'AUTH.LOGIN.SUBTITLE' | translate }}</span
         >
       </h1>
       <p
         class="text-lg text-slate-600 dark:text-slate-300 mt-2 max-w-md mx-auto"
       >
-        Please sign in to access your personalized learning experience
+        {{ 'AUTH.LOGIN.DESCRIPTION' | translate }}
       </p>
     </div>
 
@@ -43,7 +43,7 @@
           <label
             for="email"
             class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-            >Email Address</label
+            >{{ 'AUTH.LOGIN.FORM.EMAIL.LABEL' | translate }}</label
           >
           <div class="relative">
             <input
@@ -51,7 +51,7 @@
               id="email"
               formControlName="email"
               class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-primary dark:bg-slate-700 dark:text-white transition-all duration-200"
-              placeholder="name@example.com"
+              [placeholder]="'AUTH.LOGIN.FORM.EMAIL.PLACEHOLDER' | translate"
               [ngClass]="{
                 'border-red-500 focus:border-red-500 focus:ring-red-500':
                   hasError('email', 'required') || hasError('email', 'email')
@@ -62,13 +62,13 @@
               *ngIf="hasError('email', 'required') && emailControl?.touched"
               class="text-red-500 text-sm mt-1"
             >
-              Email is required
+              {{ 'AUTH.LOGIN.FORM.EMAIL.ERRORS.REQUIRED' | translate }}
             </div>
             <div
               *ngIf="hasError('email', 'email') && emailControl?.touched"
               class="text-red-500 text-sm mt-1"
             >
-              Please enter a valid email address
+              {{ 'AUTH.LOGIN.FORM.EMAIL.ERRORS.INVALID' | translate }}
             </div>
           </div>
         </div>
@@ -79,12 +79,12 @@
             <label
               for="password"
               class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-              >Password</label
+              >{{ 'AUTH.LOGIN.FORM.PASSWORD.LABEL' | translate }}</label
             >
             <a
               href="/forgot-password"
               class="text-sm text-primary hover:text-primary-dark transition-colors"
-              >Forgot password?</a
+              >{{ 'AUTH.LOGIN.FORM.PASSWORD.FORGOT' | translate }}</a
             >
           </div>
           <div class="relative">
@@ -93,7 +93,7 @@
               id="password"
               formControlName="password"
               class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-primary dark:bg-slate-700 dark:text-white transition-all duration-200"
-              placeholder="••••••••"
+              [placeholder]="'AUTH.LOGIN.FORM.PASSWORD.PLACEHOLDER' | translate"
               [ngClass]="{
                 'border-red-500 focus:border-red-500 focus:ring-red-500':
                   hasError('password', 'required') ||
@@ -149,7 +149,7 @@
               "
               class="text-red-500 text-sm mt-1"
             >
-              Password is required
+              {{ 'AUTH.LOGIN.FORM.PASSWORD.ERRORS.REQUIRED' | translate }}
             </div>
             <div
               *ngIf="
@@ -157,7 +157,7 @@
               "
               class="text-red-500 text-sm mt-1"
             >
-              Password must be at least 6 characters
+              {{ 'AUTH.LOGIN.FORM.PASSWORD.ERRORS.MINLENGTH' | translate }}
             </div>
           </div>
         </div>
@@ -190,7 +190,7 @@
               ></path>
             </svg>
           </span>
-          {{ isLoading ? "Signing in..." : "Sign in" }}
+          {{ isLoading ? ('AUTH.LOGIN.FORM.SUBMIT.LOADING' | translate) : ('AUTH.LOGIN.FORM.SUBMIT.DEFAULT' | translate) }}
         </button>
       </form>
 

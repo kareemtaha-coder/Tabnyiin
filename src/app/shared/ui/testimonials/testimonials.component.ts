@@ -9,76 +9,70 @@ import {
 import { Testimonial } from '../../../Core/models/testimonial.model';
 import { CommonModule } from '@angular/common';
 import { SwiperContainer } from 'swiper/element';
-
-
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-testimonials',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.css',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class TestimonialsComponent implements OnInit ,AfterViewInit {
+export class TestimonialsComponent implements OnInit, AfterViewInit {
   testimonials: Testimonial[] = [
     {
       id: 1,
-      name: 'Sara Ahmed',
-      role: 'Product Manager',
+      name: 'TESTIMONIALS.ITEMS.1.NAME',
+      role: 'TESTIMONIALS.ITEMS.1.ROLE',
       avatar: '/hero-img.webp',
-      content: '"This product completely transformed our workflow. The efficiency gains have been remarkable, and our team productivity has increased by 40% since implementation."',
+      content: 'TESTIMONIALS.ITEMS.1.CONTENT',
       rating: 5
     },
     {
       id: 2,
-      name: 'Mohamed Ali',
-      role: 'UX Designer',
+      name: 'TESTIMONIALS.ITEMS.2.NAME',
+      role: 'TESTIMONIALS.ITEMS.2.ROLE',
       avatar: '/hero-img.webp',
-      content: '"Intuitive, fast, and beautiful! The interface is so well designed that our entire team was up and running with minimal training."',
-      rating: 4
+      content: 'TESTIMONIALS.ITEMS.2.CONTENT',
+      rating: 5
     },
     {
       id: 3,
-      name: 'Laila Hassan',
-      role: 'CTO',
+      name: 'TESTIMONIALS.ITEMS.3.NAME',
+      role: 'TESTIMONIALS.ITEMS.3.ROLE',
       avatar: '/hero-img.webp',
-      content: '"Solid architecture and excellent support. The development team has been responsive to our needs and the product has scaled smoothly with our business growth."',
+      content: 'TESTIMONIALS.ITEMS.3.CONTENT',
       rating: 5
     },
     {
       id: 4,
-      name: 'Ahmed Mahmoud',
-      role: 'Marketing Director',
+      name: 'TESTIMONIALS.ITEMS.4.NAME',
+      role: 'TESTIMONIALS.ITEMS.4.ROLE',
       avatar: '/hero-img.webp',
-      content: '"The analytics capabilities have given us insights we never had before. We\'ve been able to make data-driven decisions that have significantly improved our campaign performance."',
+      content: 'TESTIMONIALS.ITEMS.4.CONTENT',
       rating: 5
     },
     {
       id: 5,
-      name: 'Nour Ibrahim',
-      role: 'Small Business Owner',
+      name: 'TESTIMONIALS.ITEMS.5.NAME',
+      role: 'TESTIMONIALS.ITEMS.5.ROLE',
       avatar: '/hero-img.webp',
-      content: '"As a small business, we needed an affordable solution that wouldn\'t compromise on features. This exceeded our expectations on all fronts."',
-      rating: 4
-    },
+      content: 'TESTIMONIALS.ITEMS.5.CONTENT',
+      rating: 5
+    }
   ];
-
-
-
-
-
 
   @ViewChild('swiperEl', { static: false })
   swiperEl!: ElementRef<SwiperContainer>;
 
+  constructor(private translate: TranslateService) {}
 
-  ngOnInit() {
+  ngOnInit() {}
 
-  }
   ngAfterViewInit(): void {
     const swiperElement = this.swiperEl.nativeElement;
-    swiperElement.initialize();  // now recognized by TS
+    swiperElement.initialize();
     const swiperParams = {
       slidesPerView: 1.1,
       spaceBetween: 20,
@@ -87,8 +81,6 @@ export class TestimonialsComponent implements OnInit ,AfterViewInit {
         '350': { slidesPerView: 1.1 },
         '640': { slidesPerView: 2.1 }
       },
+    };
   }
-
-
-}
 }

@@ -5,19 +5,14 @@
         <h2
           class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
         >
-          What Our Clients Say
+          {{ 'TESTIMONIALS.TITLE' | translate }}
         </h2>
         <div class="w-20 h-1 bg-indigo-500 mb-6"></div>
         <p class="text-gray-700 dark:text-gray-300 mb-6">
-          Don't just take our word for it. See what our clients have to say
-          about their experience working with us. We're proud to have helped
-          businesses across various industries achieve their goals and transform
-          their operations.
+          {{ 'TESTIMONIALS.SUBTITLE' | translate }}
         </p>
         <p class="text-gray-700 dark:text-gray-300">
-          Our team is dedicated to providing exceptional service and solutions
-          that drive real results. Join hundreds of satisfied customers who've
-          experienced the difference.
+          {{ 'TESTIMONIALS.DESCRIPTION' | translate }}
         </p>
       </div>
 
@@ -43,17 +38,17 @@
             >
               <img
                 [src]="testimonial.avatar"
-                alt="{{ testimonial.name }}"
+                [alt]="testimonial.name | translate"
                 class="w-16 h-16 rounded-full mb-4 ring-2 ring-indigo-500"
               />
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                {{ testimonial.name }}
+                {{ testimonial.name | translate }}
               </h3>
-              <p class="text-indigo-500 text-sm mb-2">{{ testimonial.role }}</p>
+              <p class="text-indigo-500 text-sm mb-2">{{ testimonial.role | translate }}</p>
               <p
                 class="text-gray-700 dark:text-gray-300 italic mb-4 text-center"
               >
-                {{ testimonial.content }}
+                {{ testimonial.content | translate }}
               </p>
               <div class="flex space-x-1 mt-auto">
                 <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">

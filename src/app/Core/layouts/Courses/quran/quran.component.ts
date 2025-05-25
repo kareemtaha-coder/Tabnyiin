@@ -1,17 +1,17 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { SafePipe } from '../../../../shared/pipes/safe.pipe';
+import { Component, inject } from '@angular/core';
+import { ContactsService } from '../../../services/contacts.service';
+import { ContactModalComponent } from '../../../../shared/ui/contact-modal/contact-modal.component';
 import { CommonModule } from '@angular/common';
-
+import { TranslateModule } from '@ngx-translate/core';
+import { SafePipe } from '../../../../shared/pipes/safe.pipe';
 
 @Component({
   selector: 'app-quran',
-  standalone: true,
-  imports: [SafePipe, CommonModule],
   templateUrl: './quran.component.html',
   styleUrl: './quran.component.css',
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  standalone: true,
+  imports: [CommonModule, TranslateModule, ContactModalComponent, SafePipe]
 })
 export class QuranComponent {
-
-
+  contactService = inject(ContactsService);
 }

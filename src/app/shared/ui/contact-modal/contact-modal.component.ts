@@ -24,7 +24,7 @@ export interface ContactFormData {
   templateUrl: './contact-modal.component.html',
   styleUrl: './contact-modal.component.css'
 })
-export class ContactFormModalComponent implements OnInit, OnDestroy {
+export class ContactModalComponent implements OnInit, OnDestroy {
   isOpen = false;
   private subscription: Subscription | null = null;
 

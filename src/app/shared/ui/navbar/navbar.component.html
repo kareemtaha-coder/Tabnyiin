@@ -113,98 +113,184 @@
 
     <!-- Mobile Menu -->
     <div
-      class="mobile-menu md:hidden overflow-hidden transition-all duration-300 ease-in-out"
-      [class.max-h-0]="!mobileMenuOpen()"
-      [class.max-h-screen]="mobileMenuOpen()"
+      class="mobile-menu md:hidden fixed inset-0 bg-white dark:bg-gray-900 z-50 transform transition-transform duration-300 ease-in-out"
+      [class.translate-x-full]="!mobileMenuOpen()"
+      [class.translate-x-0]="mobileMenuOpen()"
     >
-      <div class="pt-4 pb-2 space-y-2 border-t border-gray-200 dark:border-gray-700">
-        <!-- Language Switcher Mobile -->
-        <div class="flex items-center space-x-2 px-4 py-2">
-          <button (click)="switchLanguage('en')" class="px-3 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300">
-            {{ 'COMMON.ENGLISH' | translate }}
-          </button>
-          <button (click)="switchLanguage('ar')" class="px-3 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300">
-            {{ 'COMMON.ARABIC' | translate }}
-          </button>
-        </div>
-        <!-- Mobile Dropdown -->
-          <a
-          routerLink="/"           href="/"
-
-          (click)="closeMobileMenu()"
-          class="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300"
-        >
-          home
-        </a>
-        <div class="relative">
+      <!-- Mobile Menu Header -->
+      <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+        <img src="/logo.webp" alt="Tabiiyn Institute Logo" class="h-8 w-auto">
+        <div class="flex items-center space-x-2">
+          <!-- Theme Toggle -->
           <button
-            (click)="toggleCoursesMenu()"
-            class="flex items-center justify-between w-full px-4 py-3 text-left text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300"
+            id="theme-toggle-mobile"
+            (click)="toggleTheme()"
+            class="p-2 rounded-full bg-primary/10 hover:bg-primary/20 focus:outline-none transition-all duration-300"
+            aria-label="Toggle dark mode"
           >
-            <span>Courses</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 transform transition-transform duration-300"
-              [class.rotate-180]="coursesMenuOpen()"
+              class="h-5 w-5 text-primary hidden dark:block transition-transform duration-300 hover:rotate-45"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-primary block dark:hidden transition-transform duration-300 hover:rotate-12"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
             </svg>
           </button>
-          <div
-            class="overflow-hidden transition-all duration-300 ease-in-out"
-            [class.max-h-0]="!coursesMenuOpen()"
-            [class.max-h-40]="coursesMenuOpen()"
+          <button
+            class="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors duration-300"
+            (click)="toggleMobileMenu()"
           >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
 
-            <div class="pl-4 space-y-2 py-2">
-
-              <a
-                routerLink="/quran" href="/quran"
-                (click)="closeMobileMenu()"
-                class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300"
-              >
-                Quran Studies
-              </a>
-              <a
-                routerLink="/arabic" href="/arabic"
-                (click)="closeMobileMenu()"
-                class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300"
-              >
-                Arabic Language
-              </a>
-              <a
-                routerLink="/islamic" href="/islamic"
-                (click)="closeMobileMenu()"
-                class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300"
-              >
-                Islamic Studies
-              </a>
-            </div>
-          </div>
+      <!-- Mobile Menu Content -->
+      <div class="p-4 space-y-4  bg-white dark:bg-gray-900 z-50">
+        <!-- Language Switcher Mobile -->
+        <div class="flex items-center justify-center space-x-2 p-2">
+          <button (click)="switchLanguage('en')" class="flex-1 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300">
+            {{ 'COMMON.ENGLISH' | translate }}
+          </button>
+          <button (click)="switchLanguage('ar')" class="flex-1 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300">
+            {{ 'COMMON.ARABIC' | translate }}
+          </button>
         </div>
 
-        <a
+        <!-- Navigation Links -->
+        <div class="space-y-2">
+          <a
+            routerLink="/"
+            (click)="closeMobileMenu()"
+            class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            {{ 'COMMON.HOME' | translate }}
+          </a>
 
-          (click)="navigateToFragment('about') ; closeMobileMenu()"
-          href="/"
-          class="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300"
-        >
-          About Us
-        </a>
-        <a routerLink="/" href="/" (click)="navigateToFragment('about')" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">About Us</a>
+          <!-- Courses Dropdown -->
+          <div class="space-y-2">
+            <button
+              (click)="toggleCoursesMenu()"
+              class="flex items-center justify-between w-full px-4 py-3 text-left text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300"
+            >
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                {{ 'COMMON.COURSES' | translate }}
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 transform transition-transform duration-300"
+                [class.rotate-180]="coursesMenuOpen()"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <div
+              class="overflow-hidden transition-all duration-300 ease-in-out"
+              [class.max-h-0]="!coursesMenuOpen()"
+              [class.max-h-40]="coursesMenuOpen()"
+            >
+              <div class="p-2 space-y-1">
+                <a
+                  routerLink="/courses/quran"
+                  (click)="closeMobileMenu()"
+                  class="flex items-center px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300"
+                >
+                  {{ 'COMMON.QURAN_STUDIES' | translate }}
+                </a>
+                <a
+                  routerLink="/courses/arabic"
+                  (click)="closeMobileMenu()"
+                  class="flex items-center px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300"
+                >
+                  {{ 'COMMON.ARABIC_LANGUAGE' | translate }}
+                </a>
+                <a
+                  routerLink="/courses/islamic"
+                  (click)="closeMobileMenu()"
+                  class="flex items-center px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300"
+                >
+                  {{ 'COMMON.ISLAMIC_STUDIES' | translate }}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a
+            (click)="navigateToFragment('about'); closeMobileMenu()"
+            class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {{ 'COMMON.ABOUT' | translate }}
+          </a>
+
           @if (isUserLogedIn()) {
-          <a (click)="logout()" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">logout</a>
-        }@else{
-          <a routerLink="/login" href="/login" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">login</a>
-        }
+            <a
+              (click)="logout(); closeMobileMenu()"
+              class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              </svg>
+              {{ 'COMMON.LOGOUT' | translate }}
+            </a>
+          } @else {
+            <a
+              routerLink="/login"
+              (click)="closeMobileMenu()"
+              class="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+              </svg>
+              {{ 'COMMON.LOGIN' | translate }}
+            </a>
+          }
+        </div>
+
+        <!-- Contact Button -->
         <button
-          (click)=" closeMobileMenu()"
-          class="w-full px-4 py-3 bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-all duration-300 text-center"
+          (click)="contactService.openModal(); closeMobileMenu()"
+          class="w-full px-4 py-3 bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-all duration-300 flex items-center justify-center"
         >
-          Contact Us
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          {{ 'COMMON.CONTACT' | translate }}
         </button>
       </div>
     </div>

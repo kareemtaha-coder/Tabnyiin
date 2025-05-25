@@ -55,5 +55,358 @@
         "Raising awareness about the importance and virtue of learning Quran Tajweed, which some scholars consider obligatory for every Muslim"
       ]
     }
+  },
+  "COURSES": {
+    "TITLE": "Our Educational Programs",
+    "SUBTITLE": "We offer a comprehensive package of specialized educational programs that respect individual differences",
+    "ARABIC": {
+      "TITLE": "Arabic Language Program",
+      "HERO": {
+        "TITLE": "Arabic Language Program for Non-Native Speakers",
+        "SUBTITLE": "We adopt a comprehensive and adaptive approach to teaching Arabic, where we don't follow a single curriculum, but rather build together a customized roadmap that matches the student's level and allows them to progress either methodically or in a fast and focused way according to their needs and goals.",
+        "CTA": {
+          "START": "Begin Your Journey",
+          "CURRICULUM": "View Curriculum"
+        }
+      },
+      "METHODOLOGY": {
+        "TITLE": "Teaching Methodology",
+        "DESCRIPTION": "We adopt a comprehensive and adaptive approach to teaching Arabic, where we don't follow a single curriculum, but rather build together a customized roadmap that matches the student's level.",
+        "ITEMS": {
+          "CUSTOMIZED": {
+            "TITLE": "Customized Learning Path",
+            "DESCRIPTION": "A personalized roadmap that matches your level and allows you to progress at your own pace."
+          },
+          "PACE": {
+            "TITLE": "Flexible Pace",
+            "DESCRIPTION": "Progress either methodically or in a fast and focused way according to your needs and goals."
+          }
+        }
+      },
+      "AGE_GROUPS": {
+        "TITLE": "Age Groups",
+        "DESCRIPTION": "We start teaching from age 4 and welcome all age groups and different levels."
+      },
+      "LEARNING_PATH": {
+        "TITLE": "Learning Path",
+        "DESCRIPTION": "We pay special attention to beginners at the preparatory level, starting with teaching letters and recognition, then gradually moving to reading and writing, and with mastery, we advance to higher levels.",
+        "ITEMS": {
+          "LETTERS": {
+            "TITLE": "Letters & Recognition",
+            "DESCRIPTION": "Start with teaching Arabic letters and their recognition, building a strong foundation."
+          },
+          "READING": {
+            "TITLE": "Reading & Writing",
+            "DESCRIPTION": "Gradually progress to reading and writing skills with proper guidance."
+          },
+          "ADVANCED": {
+            "TITLE": "Advanced Levels",
+            "DESCRIPTION": "Advance to higher levels with mastery of fundamental skills."
+          }
+        }
+      },
+      "FEATURES": {
+        "INTERACTIVE": {
+          "TITLE": "Interactive Learning",
+          "DESCRIPTION": "Engage in dynamic learning sessions with qualified teachers and modern teaching methods."
+        },
+        "COMMUNITY": {
+          "TITLE": "Community Support",
+          "DESCRIPTION": "Join a supportive community of learners and practice partners from around the world."
+        },
+        "PROGRESS": {
+          "TITLE": "Progress Tracking",
+          "DESCRIPTION": "Regular assessments and progress reports to ensure steady improvement in your Arabic skills."
+        }
+      }
+    },
+    "QURAN": {
+      "TITLE": "Quran Program",
+      "SUBTITLE": "A comprehensive program for learning and memorizing the Holy Quran",
+      "HERO": {
+        "TITLE": "Master the Noble Quran",
+        "SUBTITLE": "Journey through the divine revelation with expert guidance. Our comprehensive Quran courses combine tajweed, tafsir, and memorization techniques.",
+        "CTA": {
+          "START": "Begin Your Journey",
+          "CURRICULUM": "View Curriculum"
+        }
+      },
+      "FEATURES": {
+        "TAJWEED": {
+          "TITLE": "Tajweed Mastery",
+          "DESCRIPTION": "Learn proper pronunciation and recitation with expert guidance"
+        },
+        "TAFSIR": {
+          "TITLE": "Tafsir Studies",
+          "DESCRIPTION": "Understand the deeper meaning behind the divine verses"
+        },
+        "COMMUNITY": {
+          "TITLE": "Global Community",
+          "DESCRIPTION": "Join learners from around the world on this sacred journey"
+        }
+      },
+      "OVERVIEW": {
+        "TITLE": "Your Journey Through the Noble Quran",
+        "DESCRIPTION": "Our comprehensive curriculum is designed to take you from foundational recitation to deep understanding of the Quranic message, suitable for all levels of learners.",
+        "STATS": {
+          "SUPPORT": {
+            "VALUE": "24/7",
+            "LABEL": "Support Access"
+          },
+          "STUDENTS": {
+            "VALUE": "5k+",
+            "LABEL": "Active Students"
+          }
+        }
+      },
+      "BENEFITS": {
+        "TITLE": "What You'll Gain",
+        "ITEMS": {
+          "STRUCTURE": {
+            "TITLE": "Structured Learning Path",
+            "DESCRIPTION": "Follow our carefully designed curriculum that gradually builds your knowledge and skills from basics to advanced concepts."
+          },
+          "TAJWEED": {
+            "TITLE": "Perfect Tajweed",
+            "DESCRIPTION": "Master proper pronunciation and recitation rules with our specialized training techniques and personalized feedback."
+          },
+          "TAFSIR": {
+            "TITLE": "Deep Tafsir Understanding",
+            "DESCRIPTION": "Gain insights into the meanings, context, and wisdom behind Quranic verses with our detailed explanations."
+          },
+          "MEMORIZATION": {
+            "TITLE": "Memorization Techniques",
+            "DESCRIPTION": "Learn proven methods to memorize the Quran effectively and retain what you've learned long-term."
+          },
+          "COMMUNITY": {
+            "TITLE": "Community Support",
+            "DESCRIPTION": "Join a global community of learners for mutual encouragement, practice partners, and shared wisdom."
+          },
+          "APPLICATION": {
+            "TITLE": "Practical Application",
+            "DESCRIPTION": "Learn how to apply Quranic teachings in daily life with practical examples and guidance."
+          }
+        }
+      },
+      "CURRICULUM": {
+        "TITLE": "Curriculum Highlights",
+        "MODULES": {
+          "1": {
+            "TITLE": "Fundamentals of Quran Recitation",
+            "DESCRIPTION": "Arabic alphabet, basic pronunciation, and introductory tajweed rules"
+          },
+          "2": {
+            "TITLE": "Tajweed Rules in Depth",
+            "DESCRIPTION": "Comprehensive study of proper articulation points and essential rules"
+          },
+          "3": {
+            "TITLE": "Tafsir Methodology",
+            "DESCRIPTION": "Understanding the sciences of Quranic interpretation and context"
+          }
+        }
+      },
+      "READING": {
+        "TITLE": "Reading Program",
+        "DESCRIPTION": "For students who are not proficient in reading, we start with specialized educational books such as Noor Al-Bayan, Fath Al-Rahman, or Al-Qaida Al-Baghdadiyah, which aim to enable them to read the Holy Quran correctly.",
+        "METHODS": {
+          "TITLE": "Teaching Methods",
+          "NOOR_ALBAYAN": "A comprehensive method for teaching Arabic reading and Quran recitation",
+          "FATH_ALRAHMAN": "A systematic approach to learning Quranic reading with proper tajweed",
+          "BAGHDADI": "Traditional method focusing on Arabic letters and their proper pronunciation"
+        }
+      },
+      "MEMORIZATION": {
+        "TITLE": "Memorization Program",
+        "DESCRIPTION": "We start with children who are unable to read by memorizing the Holy Quran, using methods such as dictation, understanding meanings, and simplified word interpretation, which enhances the retention of verses in the child's memory.",
+        "METHODS": {
+          "TITLE": "Learning Methods",
+          "DICTATION": "Dictation Method",
+          "DICTATION_DESC": "Writing and repeating verses to strengthen memory",
+          "MEANING": "Understanding Meanings",
+          "MEANING_DESC": "Learning the meaning of verses to enhance comprehension",
+          "SIMPLIFIED": "Simplified Interpretation",
+          "SIMPLIFIED_DESC": "Age-appropriate explanation of Quranic words and concepts"
+        }
+      },
+      "FEATURES": {
+        "PERSONALIZED": {
+          "TITLE": "Personalized Learning",
+          "DESCRIPTION": "Customized learning plans based on each student's level and needs"
+        },
+        "INTERACTIVE": {
+          "TITLE": "Interactive Sessions",
+          "DESCRIPTION": "Engaging one-on-one sessions with qualified teachers"
+        },
+        "PROGRESS": {
+          "TITLE": "Progress Tracking",
+          "DESCRIPTION": "Regular assessments and progress reports to ensure steady improvement"
+        }
+      }
+    },
+    "ISLAMIC": {
+      "HERO": {
+        "TITLE": "Islamic Studies Program",
+        "SUBTITLE": "A comprehensive and diverse program covering all age groups (males and females), designed to provide a deep understanding of Islamic knowledge and values.",
+        "CTA": {
+          "START": "Begin Your Journey",
+          "CURRICULUM": "View Curriculum"
+        }
+      },
+      "OVERVIEW": {
+        "BADGE": "Course Overview",
+        "TITLE": "Your Journey Through Islamic Knowledge",
+        "DESCRIPTION": "Our comprehensive curriculum is designed to take you from foundational concepts to deep understanding of Islamic sciences, suitable for all levels of learners."
+      },
+      "SEERAH": {
+        "TITLE": "Prophetic Biography",
+        "DESCRIPTION": "Presenting the biography of the Prophet ﷺ supported by images and stories, explained in a simplified manner suitable for children."
+      },
+      "MOTHERS": {
+        "TITLE": "Mothers of Believers",
+        "DESCRIPTION": "For young and older girls, presented in an engaging style that instills recognition of female role models in Islam and encourages emulation of their virtues."
+      },
+      "ETIQUETTE": {
+        "TITLE": "Islamic Etiquette",
+        "DESCRIPTION": "Learn the proper Islamic manners and behaviors for daily life.",
+        "ITEMS": {
+          "EATING": {
+            "TITLE": "Eating & Drinking",
+            "DESCRIPTION": "Proper manners for consuming food and drink according to Islamic teachings."
+          },
+          "SLEEPING": {
+            "TITLE": "Sleeping & Waking",
+            "DESCRIPTION": "Islamic guidelines for sleep habits and morning routines."
+          },
+          "MOSQUE": {
+            "TITLE": "Mosque Etiquette",
+            "DESCRIPTION": "Proper conduct and manners when visiting and praying in the mosque."
+          },
+          "SOCIAL": {
+            "TITLE": "Social Interaction",
+            "DESCRIPTION": "Guidelines for interacting with others in various social situations."
+          }
+        }
+      },
+      "ETHICS": {
+        "TITLE": "Islamic Ethics",
+        "DESCRIPTION": "Study of virtuous and reprehensible character traits and their impact on individuals and society.",
+        "ITEMS": {
+          "VIRTUES": {
+            "TITLE": "Virtuous Traits",
+            "DESCRIPTION": "Study of noble qualities such as honesty, generosity, and trustworthiness."
+          },
+          "VICES": {
+            "TITLE": "Reprehensible Traits",
+            "DESCRIPTION": "Understanding negative traits like lying, miserliness, and betrayal, and their consequences."
+          }
+        }
+      },
+      "FEATURES": {
+        "INTERACTIVE": {
+          "TITLE": "Interactive Learning",
+          "DESCRIPTION": "Engage with dynamic content through stories, activities, and practical examples."
+        },
+        "COMMUNITY": {
+          "TITLE": "Supportive Community",
+          "DESCRIPTION": "Join a community of learners for mutual support and shared growth."
+        },
+        "PROGRESS": {
+          "TITLE": "Track Progress",
+          "DESCRIPTION": "Monitor your development through regular assessments and feedback."
+        }
+      }
+    },
+    "FAMILY": {
+      "TITLE": "Family Study Option",
+      "DESCRIPTION": "We offer the option of joint study for family members when desired, provided that students are at the same academic level"
+    }
+  },
+  "TESTIMONIALS": {
+    "TITLE": "What Our Students Say",
+    "SUBTITLE": "Don't just take our word for it. See what our students have to say about their learning journey with us.",
+    "DESCRIPTION": "Our team is dedicated to providing exceptional education and guidance that drives real results. Join hundreds of satisfied students who've experienced the difference.",
+    "ITEMS": {
+      "1": {
+        "NAME": "Sarah Ahmed",
+        "ROLE": "Arabic Language Student",
+        "CONTENT": "The Arabic language program at Tabnyiin has been transformative. The teachers are incredibly patient and the curriculum is well-structured. I've made more progress in 6 months than I did in 2 years of self-study."
+      },
+      "2": {
+        "NAME": "Mohammed Ali",
+        "ROLE": "Quran Student",
+        "CONTENT": "Learning Quran recitation with proper tajweed has been a beautiful journey. The teachers are knowledgeable and the online platform makes it easy to practice between sessions. Highly recommended!"
+      },
+      "3": {
+        "NAME": "Fatima Hassan",
+        "ROLE": "Islamic Studies Student",
+        "CONTENT": "The Islamic studies program has deepened my understanding of our faith. The teachers explain complex concepts in a way that's easy to understand, and the interactive sessions make learning engaging."
+      },
+      "4": {
+        "NAME": "Ahmed Mahmoud",
+        "ROLE": "Family Program Student",
+        "CONTENT": "As a family, we've found Tabnyiin to be the perfect platform for our children's Islamic education. The family program is flexible and the teachers are excellent with kids. Our children look forward to their classes!"
+      },
+      "5": {
+        "NAME": "Layla Ibrahim",
+        "ROLE": "Advanced Arabic Student",
+        "CONTENT": "The advanced Arabic program has helped me achieve fluency I never thought possible. The personalized attention and structured approach have been invaluable to my learning journey."
+      }
+    }
+  },
+  "COURSE_FEATURES": {
+    "ARABIC": {
+      "TITLE": "Arabic Language Program",
+      "FEATURES": {
+        "AGE": "Teaching starts from age 4",
+        "METHOD": "Comprehensive and adaptive curriculum based on student level",
+        "LEVELS": "Different levels from beginner to advanced"
+      }
+    },
+    "QURAN": {
+      "TITLE": "Quran Program",
+      "FEATURES": {
+        "AGE": "Suitable for all ages",
+        "METHOD": "Personalized learning approach with expert teachers",
+        "LEVELS": "From basic recitation to advanced memorization"
+      }
+    },
+    "ISLAMIC": {
+      "TITLE": "Islamic Studies Program",
+      "FEATURES": {
+        "AGE": "Designed for all age groups",
+        "METHOD": "Interactive and engaging teaching methods",
+        "LEVELS": "From basic Islamic concepts to advanced studies"
+      }
+    }
+  },
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "Welcome to",
+      "SUBTITLE": "Tabiiyn Institute",
+      "DESCRIPTION": "Please sign in to access your personalized learning experience",
+      "FORM": {
+        "EMAIL": {
+          "LABEL": "Email Address",
+          "PLACEHOLDER": "name@example.com",
+          "ERRORS": {
+            "REQUIRED": "Email is required",
+            "INVALID": "Please enter a valid email address"
+          }
+        },
+        "PASSWORD": {
+          "LABEL": "Password",
+          "PLACEHOLDER": "••••••••",
+          "FORGOT": "Forgot password?",
+          "ERRORS": {
+            "REQUIRED": "Password is required",
+            "MINLENGTH": "Password must be at least 6 characters"
+          }
+        },
+        "SUBMIT": {
+          "DEFAULT": "Sign in",
+          "LOADING": "Signing in..."
+        }
+      }
+    }
   }
 }
