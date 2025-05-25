@@ -146,3 +146,25 @@ button,
   background-color: var(--primary);
   border-radius: 10px;
 }
+
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+}
+
+.language-switcher button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background: #f0f0f0;
+}

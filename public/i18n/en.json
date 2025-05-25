@@ -1,0 +1,59 @@
+{
+  "COMMON": {
+    "WELCOME": "Welcome",
+    "LANGUAGE": "Language",
+    "ENGLISH": "English",
+    "ARABIC": "Arabic",
+    "HOME": "Home",
+    "ABOUT": "About Us",
+    "CONTACT": "Contact Us",
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "LOGOUT": "Logout",
+    "COURSES": "Courses",
+    "QURAN_STUDIES": "Quran Studies",
+    "ARABIC_LANGUAGE": "Arabic Language",
+    "ISLAMIC_STUDIES": "Islamic Studies",
+    "START_LEARNING": "Start Learning",
+    "EXPLORE_COURSES": "Explore Courses"
+  },
+  "HERO": {
+    "TITLE": "Welcome to Tabiiyn Institute",
+    "SUBTITLE": "Your trusted educational destination for learning Arabic, Quran, and Islamic Studies, through specialized programs delivered via a sophisticated global platform.",
+    "DESCRIPTION": "We offer a unique educational experience that combines academic quality with digital flexibility, under the supervision of elite specialized teachers, to provide our students from around the world with the opportunity to learn in a modern, enjoyable, and comprehensive manner that suits their individual needs and different levels.",
+    "FOOTER": "At Tabiiyn Institute, we don't just teach... we bring language and values to life in hearts. 🌍📚"
+  },
+  "ABOUT": {
+    "TITLE": "Why Tabiiyn Academy?",
+    "ADVANTAGES": {
+      "TITLE": "Advantages of Studying at Our Institute",
+      "ITEMS": [
+        "Individual and group courses available",
+        "Flexible scheduling for individual sessions",
+        "Use of modern technology in teaching and information presentation",
+        "Providing an enjoyable environment in children's circles with artistic activities to reinforce learning",
+        "Focus on psychological aspects and consideration of individual differences among students",
+        "We have an exceptional group of specialized Al-Azhar teachers",
+        "Support groups for communication between students and their teachers",
+        "Continuous communication with parents to achieve the best benefit for the child",
+        "Issuing certified certificates at the end of each course",
+        "Teaching Quran Tajweed for beginners through easy methods and simplified curricula suitable for everyone"
+      ]
+    },
+    "OBJECTIVES": {
+      "TITLE": "Objectives",
+      "ITEMS": [
+        "Teaching Arabic language and proper reading rules",
+        "Teaching children Arabic and Tajweed in an easy way to instill love for their language and attachment to the Holy Quran",
+        "Creating a means to preserve the identity of our Arab children in foreign countries through their communication with us and receiving language and Quran sciences",
+        "Contributing to helping non-Arabic speakers learn and master Quran recitation",
+        "Helping parents in memorizing the Holy Quran for their children with proper Tajweed rules and correct pronunciation",
+        "Providing an easy way to learn and memorize through online lectures",
+        "Encouraging students to form study groups to motivate them to study and excel",
+        "Providing psychological support to our students to help them continue and maintain their religious identity",
+        "Online Quran memorization for residents in non-Muslim countries and helping them obtain online certification in Quran recitation",
+        "Raising awareness about the importance and virtue of learning Quran Tajweed, which some scholars consider obligatory for every Muslim"
+      ]
+    }
+  }
+}

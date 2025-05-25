@@ -3,22 +3,26 @@ import { Component, effect, HostListener, inject, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { ContactsService } from '../../../Core/services/contacts.service';
 import { LoginService } from '../../../Core/services/login.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
-  imports:[RouterLink]
+  imports: [RouterLink, TranslateModule],
+  standalone: true
 })
 export class NavbarComponent {
   private initialDark = localStorage.getItem('theme') === 'dark';
-  token=signal<boolean>(localStorage.getItem('token') !='')
+  token = signal<boolean>(localStorage.getItem('token') != '');
   themeDark = signal(this.initialDark);
   mobileMenuOpen = signal(false);
   coursesMenuOpen = signal(false);
-  loginService= inject(LoginService)
-  isUserLogedIn = this.loginService.isUserLoggedIn
-  scroller=inject(ViewportScroller)
+  loginService = inject(LoginService);
+  isUserLogedIn = this.loginService.isUserLoggedIn;
+  scroller = inject(ViewportScroller);
+  translate = inject(TranslateService);
+
   constructor(private router: Router) {
     effect(() => {
       if (this.themeDark()) {
@@ -29,7 +33,8 @@ export class NavbarComponent {
       localStorage.setItem('theme', this.themeDark() ? 'dark' : 'light');
     });
   }
- // Close menu when clicking outside
+
+  // Close menu when clicking outside
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
@@ -37,6 +42,7 @@ export class NavbarComponent {
       this.closeMobileMenu();
     }
   }
+
   toggleTheme() {
     this.themeDark.set(!this.themeDark());
   }
@@ -57,16 +63,20 @@ export class NavbarComponent {
     this.coursesMenuOpen.set(false);
   }
 
+  navigateToFragment(fragment: string) {
+    this.scroller.scrollToAnchor(fragment);
+  }
 
-navigateToFragment(fragment: string) {
-    this.scroller.scrollToAnchor(fragment)
-}
-  contactService = inject(ContactsService)
+  contactService = inject(ContactsService);
 
-
-
-  logout(){
+  logout() {
     this.loginService.logout();
-    this.isUserLogedIn.set(false)
+    this.isUserLogedIn.set(false);
+  }
+
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
   }
 }

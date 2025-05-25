@@ -9,25 +9,25 @@
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
         <!-- Dropdown Menu -->
-        <a routerLink="/" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">Home</a>
+        <a routerLink="/" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">{{ 'COMMON.HOME' | translate }}</a>
         <div class="relative group">
           <button class="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">
-            <span>Courses</span>
+            <span>{{ 'COMMON.COURSES' | translate }}</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50">
-            <a routerLink="/courses/quran"  href="/courses/quran" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300 rounded-t-lg">Quran Studies</a>
-            <a routerLink="/courses/arabic"  href="/courses/arabic" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300">Arabic Language</a>
-            <a routerLink="/courses/islamic" href="/courses/islamic" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300 rounded-b-lg">Islamic Studies</a>
+            <a routerLink="/courses/quran" href="/courses/quran" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300 rounded-t-lg">{{ 'COMMON.QURAN_STUDIES' | translate }}</a>
+            <a routerLink="/courses/arabic" href="/courses/arabic" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300">{{ 'COMMON.ARABIC_LANGUAGE' | translate }}</a>
+            <a routerLink="/courses/islamic" href="/courses/islamic" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary transition-colors duration-300 rounded-b-lg">{{ 'COMMON.ISLAMIC_STUDIES' | translate }}</a>
           </div>
         </div>
-        <a routerLink="/" href="/" (click)="navigateToFragment('about')" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">About Us</a>
+        <a routerLink="/" href="/" (click)="navigateToFragment('about')" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">{{ 'COMMON.ABOUT' | translate }}</a>
           @if (isUserLogedIn()) {
-          <a (click)="logout()" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">logout</a>
+          <a (click)="logout()" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">{{ 'COMMON.LOGOUT' | translate }}</a>
         }@else{
-          <a routerLink="/login" href="/login" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">login</a>
+          <a routerLink="/login" href="/login" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">{{ 'COMMON.LOGIN' | translate }}</a>
         }
 
 
@@ -35,9 +35,19 @@
 
       <!-- Right side actions -->
       <div class="flex items-center space-x-4">
+        <!-- Language Switcher -->
+        <div class="hidden md:flex items-center space-x-2">
+          <button (click)="switchLanguage('en')" class="px-3 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300">
+            {{ 'COMMON.ENGLISH' | translate }}
+          </button>
+          <button (click)="switchLanguage('ar')" class="px-3 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300">
+            {{ 'COMMON.ARABIC' | translate }}
+          </button>
+        </div>
+
         <!-- Contact Button -->
-        <button (click)="this.contactService.openModal()"  class="hidden md:block px-4 py-2 bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-all duration-300 shadow hover:shadow-md transform hover:-translate-y-0.5">
-          Contact Us
+        <button (click)="this.contactService.openModal()" class="hidden md:block px-4 py-2 bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-all duration-300 shadow hover:shadow-md transform hover:-translate-y-0.5">
+          {{ 'COMMON.CONTACT' | translate }}
         </button>
 
         <!-- Theme Toggle -->
@@ -108,6 +118,15 @@
       [class.max-h-screen]="mobileMenuOpen()"
     >
       <div class="pt-4 pb-2 space-y-2 border-t border-gray-200 dark:border-gray-700">
+        <!-- Language Switcher Mobile -->
+        <div class="flex items-center space-x-2 px-4 py-2">
+          <button (click)="switchLanguage('en')" class="px-3 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300">
+            {{ 'COMMON.ENGLISH' | translate }}
+          </button>
+          <button (click)="switchLanguage('ar')" class="px-3 py-1 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-all duration-300">
+            {{ 'COMMON.ARABIC' | translate }}
+          </button>
+        </div>
         <!-- Mobile Dropdown -->
           <a
           routerLink="/"           href="/"

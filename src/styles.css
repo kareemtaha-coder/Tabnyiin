@@ -1,5 +1,8 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
-@tailwind utilities;
+
 
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
@@ -13,7 +16,7 @@
   --color-muted: #6b7280; /* gray for text descriptions */
   --color-border: #e5e7eb; /* light border */
   --color-text: #1c1c1c; /* dark readable text */
-  
+
 }
 
 
@@ -41,4 +44,29 @@ html{
 [lang="ar"] {
   font-family: 'Noto Kufi Arabic', sans-serif;
   direction: rtl;
+}
+
+/* Custom styles */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #4f46e5;
+  --accent-color: #7c3aed;
+}
+
+/* Font family utilities */
+.font-arabic {
+  font-family: 'Cairo', sans-serif;
+}
+
+.font-english {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* RTL support */
+[dir="rtl"] {
+  font-family: 'Cairo', sans-serif;
+}
+
+[dir="ltr"] {
+  font-family: 'Poppins', sans-serif;
 }
